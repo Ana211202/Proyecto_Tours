@@ -73,16 +73,16 @@ export class ReservaComponent {
 
   tours = [
     {
-      name: 'Tour a la Playa',
-      price: 100
+      name: 'Tour a Seul Corea',
+      price: 5000
     },
     {
-      name: 'Tour a la Montaña',
-      price: 150
+      name: 'Tour Machu Picchu Peru',
+      price: 4000
     },
     {
-      name: 'Tour a la Ciudad',
-      price: 75
+      name: 'Tour a Petra Jordania',
+      price: 3500
     }
   ];
   

@@ -1,3 +1,6 @@
+<body class="resertour">
+  
+
 <h1>Tours Disponibles</h1>
 <ul>
   <li *ngFor="let tour of tours">
@@ -12,7 +15,7 @@
     <label for="time">Hora:  </label>
     <input type="time" id="time" name="time" ngModel>
     <br>
-    <button type="button" class="btn btn-outline-primary" type="submit">Reservar</button>
+    <button mat-raised-button color="accent" type="button"  type="submit">Reservar</button>
   </form>
 
 <div *ngIf="reservations.length > 0">
@@ -42,5 +45,5 @@
   <p>No hay reservaciones hechas.</p>
 </div>
   
-  
+  </body>
  

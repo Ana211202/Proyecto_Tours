@@ -22,13 +22,33 @@
     }
 }
 
-.card-columns {
+/* .card-columns {
     column-break-inside: avoid;
     display: inline-block;
     padding-left: 40px;
     padding-right: 40px;
-}
-
+} */
 .title {
     text-align: center;
 }
+.titlegaleria {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .card {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

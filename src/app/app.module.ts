@@ -17,6 +17,13 @@ import { TourlistComponent } from './componentes/tourlist/tourlist.component';
 import { DestinosComponent } from './componentes/destinos/destinos.component';
 import { VideoPipe } from './componentes/pipes/video.pipe';
 import { SearchComponent } from './componentes/search/search.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,14 @@ import { SearchComponent } from './componentes/search/search.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatIconModule,
+    HttpClientModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
