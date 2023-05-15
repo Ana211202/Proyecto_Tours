@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(204, 238, 238);
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos del encabezado */
+  .cabecera {
+    background-color: #0077cc;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cabecera a {
+    color: #fff;
+  }
+  
+  /* Estilos del idioma */
+  .idioma {
+    float: right;
+    margin: 20px;
+  }
+  
+  .idioma ul li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  /* Estilos del contenedor */
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .bloq_izq {
+    flex-basis: 70%;
+    margin-right: 20px;
+  }
+  
+  .bloq_izq h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+  
+  .bloq_izq p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .bloq_der {
+    flex-basis: 30%;
+  }
+  
+  .bloq_der h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+  
+  .bloq_der ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos del pie */
+  .pie {
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pie a {
+    color: #0077cc;
+  }
+  
+  .header1{
+   text-align: left;
+  }

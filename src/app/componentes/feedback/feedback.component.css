@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+}
+
+.cajas {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.contenido, .pagina {
+    border: solid 1px;
+    border-radius: 5px;
+    padding-bottom: 4px;
+}
