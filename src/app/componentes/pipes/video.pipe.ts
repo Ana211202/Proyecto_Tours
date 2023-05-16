@@ -31,14 +31,14 @@ export class VideoPipe implements PipeTransform {
         }        
     }
     switch (value) {
-      case 1: return '../assets/video/video1.mp4'
-          case 2: return '../assets/video/video2.mp4';
-          case 3: return '../assets/video/video3.mp4';
-          case 4: return '../assets/video/video4.mp4';
-          case 0: return '../assets/video/video5.mp4';
-          case 6: return '../assets/video/video6.mp4';
-          case 7: return '../assets/video/video7.mp4';                        
+      case 1: return 'assets/video/video1.mp4'
+          case 2: return 'assets/video/video2.mp4';
+          case 3: return 'assets/video/video3.mp4';
+          case 4: return 'assets/video/video4.mp4';
+          case 0: return 'assets/video/video5.mp4';
+          case 6: return 'assets/video/video6.mp4';
+          case 7: return 'assets/video/video7.mp4';                        
     }  
-    return "reserva/src/assets/video/video1.mp4";
+    return "assets/video/video1.mp4";
 }
 }
