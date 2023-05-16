@@ -14,4 +14,17 @@
                     <div class="card-footer"><b>SubType:</b> {{ Location.subType }}</div>
                   </div>
             </div>
-    </form>
+    </form> 
+
+
+    <li *ngFor="let valor of X">
+        {{valor}}
+        <br>
+        <p>{{valor | video}}</p>
+        <br>
+        <video width="500" height="500" controls>
+            <source [src]="valor | video" type="video/mp4">
+          </video>
+        
+      </li>
+      

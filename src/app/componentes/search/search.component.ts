@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SearchComponent implements OnInit {
+
+  X = [1];
+  handleSearch(value: string){
+    console.log(value)
+  }
+  
   from: any = "";
   fromLocation: any = [];
   origin: any;
