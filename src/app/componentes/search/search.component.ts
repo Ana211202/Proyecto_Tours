@@ -9,7 +9,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 export class SearchComponent implements OnInit {
 
-  X = [1];
+  X = Math.round(Math.random()*(3-1)+1);
   handleSearch(value: string){
     console.log(value)
   }
