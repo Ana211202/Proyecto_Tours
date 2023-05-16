@@ -1,104 +1,109 @@
-<div class="title">
-    <h1>¿Tienes alguna sugerencia?</h1>
-    <h5>Queremos mejorar para ti. Deja tu mensaje en la sección correspondiente.</h5>
-    <br><br><br>
-</div>
-
-<div class="cajas">
-    <div class="contenido">
-
-        <h5>Para mejorar nuestro contenido.</h5>
-        <p>Puedes decirnos qué más te gustaría ver en nuestra página, qué información necesitas para mejorar tu experiencia.</p>
-        <div class="form1 form-group">
-            <label  for="nombre">Nombre </label>
-            <br>
-            <input type="text" [(ngModel)]="nom">
-            
-            <br>
-            <small>Escribe tu nombre</small>
-            <br><br>
-            <label for="correo">E-mail</label>
-            <br>
-            <input id="email1" type="email" [(ngModel)]="cor">
-            <br>
-            <small>Escribe tu e-mail</small>  
-            <br><br>
-            <label for="comentario">Comentario</label>
-            <br>
-            <input id="comentario1" type="text" [(ngModel)]="com">
-            <br>
-            <small>Escribe tus comentarios</small>
-            <br><br>
-            <button type="submit" (click)="agregar1()">Enviar</button>
-            <button type="submit" (click)="ver1()">Mostrar Comentarios</button>
+<div class="feedback">
+    <div class="title">
+        <h1>¿Tienes alguna sugerencia?</h1>
+        <h5>Queremos mejorar para ti. Deja tu mensaje en la sección correspondiente.</h5>
+        <br><br><br>
     </div>
-    <div class="tabla1" *ngIf="comentarios1.length>0 else noComen" [ngStyle]="{'visibility': visibilidad1}">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Comentario</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let var1 of comentarios1">
-                    <td>{{var1.nombre1}}</td>
-                    <td>{{var1.comentario1}}</td>
-                </tr> 
-            </tbody>
-        </table>
-    </div>
-    </div>
-
-    <div class="pagina">
-        <h5>Para mejorar nuestra página.</h5>
-        <p>Déjanos saber si encontraste alguna falla o área de oportunidad.</p>
-        <div class="form2">
-            <div class="form2 form-group">
-                <label for="nombre">Nombre </label>
+    
+    <div class="cajas">
+        <div class="contenido">
+    
+            <h5>Para mejorar nuestro contenido.</h5>
+            <p>Puedes decirnos qué más te gustaría ver en nuestra página, qué información necesitas para mejorar tu experiencia.</p>
+            <div class="form1 form-group">
+                <label  for="nombre">Nombre </label>
                 <br>
-                <input id="nombre" type="text" [(ngModel)]="nom2">
+                <input type="text" [(ngModel)]="nom">
+                
                 <br>
                 <small>Escribe tu nombre</small>
                 <br><br>
                 <label for="correo">E-mail</label>
                 <br>
-                <input type="email" [(ngModel)]="cor2">
+                <input id="email1" type="email" [(ngModel)]="cor">
                 <br>
-                <small>Escribe tu e-mail</small>
+                <small>Escribe tu e-mail</small>  
                 <br><br>
                 <label for="comentario">Comentario</label>
                 <br>
-                <input type="text" [(ngModel)]="com2">
+                <input id="comentario1" type="text" [(ngModel)]="com">
                 <br>
                 <small>Escribe tus comentarios</small>
                 <br><br>
-                <button type="submit" (click)="agregar2()">Enviar</button>
-                <button type="submit" (click)="ver2()">Mostrar Comentarios</button>
-            </div>
+                <button id="env1" type="submit" (click)="agregar1()">Enviar</button>
+                <br><br>
+                <button id="mc1" type="submit" (click)="ver1()">Mostrar Comentarios</button>
+                
         </div>
-        <div class="tabla2" *ngIf="comentarios2.length>0 else noComen" [ngStyle]="{'visibility': visibilidad2}">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>  </th>
-                    <th>Comentario</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let var2 of comentarios2">
-                    <td>{{var2.nombre2}}</td>
-                    <td>  </td>
-                    <td>{{var2.comentario2}}</td>
-                </tr> 
-            </tbody>
-        </table>
+        <div class=" table tabla1" *ngIf="comentarios1.length>0 else noComen" [ngStyle]="{'visibility': visibilidad1}">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Comentario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr scope="row" *ngFor="let var1 of comentarios1">
+                        <td>{{var1.nombre1}}</td>
+                        <td>{{var1.comentario1}}</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+        </div>
+    
+        <div class="pagina">
+            <h5>Para mejorar nuestra página.</h5>
+            <p>Déjanos saber si encontraste alguna falla o área de oportunidad.</p>
+            <div class="form2">
+                <div class="form2 form-group">
+                    <label for="nombre">Nombre </label>
+                    <br>
+                    <input id="nombre" type="text" [(ngModel)]="nom2">
+                    <br>
+                    <small>Escribe tu nombre</small>
+                    <br><br>
+                    <label for="correo">E-mail</label>
+                    <br>
+                    <input type="email" [(ngModel)]="cor2">
+                    <br>
+                    <small>Escribe tu e-mail</small>
+                    <br><br>
+                    <label for="comentario">Comentario</label>
+                    <br>
+                    <input type="text" [(ngModel)]="com2">
+                    <br>
+                    <small>Escribe tus comentarios</small>
+                    <br><br>
+                    <button id="env2" type="submit" (click)="agregar2()">Enviar</button>
+                    <br><br>
+                    <button id="mc2" type="submit" (click)="ver2()">Mostrar Comentarios</button>
+                </div>
+            </div>
+            <div class=" table tabla2" *ngIf="comentarios2.length>0 else noComen" [ngStyle]="{'visibility': visibilidad2}">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>  </th>
+                        <th>Comentario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let var2 of comentarios2">
+                        <td>{{var2.nombre2}}</td>
+                        <td>  </td>
+                        <td>{{var2.comentario2}}</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+        </div>
+        
     </div>
     </div>
     
-</div>
-
-<ng-template #noComen [ngStyle]="{'visibility':'visibilidad1'}">
-    <!-- <p >No hay comentarios</p> -->
-</ng-template>
+    <ng-template #noComen [ngStyle]="{'visibility':'visibilidad1'}">
+        <!-- <p >No hay comentarios</p> -->
+    </ng-template>

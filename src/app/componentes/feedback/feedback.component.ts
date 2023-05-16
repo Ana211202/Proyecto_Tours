@@ -52,6 +52,7 @@ export class FeedbackComponent {
     this.nom2="";
     this.cor2="";
     this.com2="";
+    swal.fire('Enviado', this.alerta, 'success');
   }
 
   ver1() {
