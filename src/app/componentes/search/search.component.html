@@ -17,11 +17,10 @@
     </form> 
 
 <div style=" padding-left: 40%;" (contextmenu)="onRightClick()">
-    <li *ngFor="let valor of X" >
-       
-        
+    <li>
+       {{X}}        
         <video width="500" height="500" controls>
-            <source [src]="valor | video" type="video/mp4">
+            <source [src]="X | video" type="video/mp4">
           </video>
         
       </li>
