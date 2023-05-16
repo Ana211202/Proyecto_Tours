@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 
 @Component({
@@ -13,7 +13,10 @@ export class SearchComponent implements OnInit {
   handleSearch(value: string){
     console.log(value)
   }
-  
+  @HostListener('contextmenu', ['$event'])
+  onRightClick(){
+    return(false);
+  }
   from: any = "";
   fromLocation: any = [];
   origin: any;

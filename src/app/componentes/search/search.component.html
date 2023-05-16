@@ -16,16 +16,14 @@
             </div>
     </form> 
 
-
-    <li *ngFor="let valor of X">
-        {{valor}}
-        <br>
-        <p>{{valor | video}}</p>
-        <br>
+<div style=" padding-left: 40%;" (contextmenu)="onRightClick()">
+    <li *ngFor="let valor of X" >
+       
+        
         <video width="500" height="500" controls>
             <source [src]="valor | video" type="video/mp4">
           </video>
         
       </li>
-      
+    </div>
       <app-pie></app-pie>
