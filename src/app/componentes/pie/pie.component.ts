@@ -15,15 +15,15 @@ export class PieComponent {
   ) {
     this.matIconRegistry.addSvgIcon(
       'facebook',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/images/face.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/face.svg')
     );
     this.matIconRegistry.addSvgIcon(
       'twitter',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/images/twiter.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/twiter.svg')
     );
     this.matIconRegistry.addSvgIcon(
       'google',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/images/google.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/google.svg')
     );
 
     
