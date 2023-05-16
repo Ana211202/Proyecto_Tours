@@ -10,6 +10,7 @@
     
             <h5>Para mejorar nuestro contenido.</h5>
             <p>Puedes decirnos qué más te gustaría ver en nuestra página, qué información necesitas para mejorar tu experiencia.</p>
+            <form action="">
             <div class="form1 form-group">
                 <label  for="nombre">Nombre </label>
                 <br>
@@ -35,6 +36,7 @@
                 <button id="mc1" type="submit" (click)="ver1()">Mostrar Comentarios</button>
                 
         </div>
+    </form>
         <div class=" table tabla1" *ngIf="comentarios1.length>0 else noComen" [ngStyle]="{'visibility': visibilidad1}">
             <table>
                 <thead>
@@ -56,6 +58,7 @@
         <div class="pagina">
             <h5>Para mejorar nuestra página.</h5>
             <p>Déjanos saber si encontraste alguna falla o área de oportunidad.</p>
+            <form action="">
             <div class="form2">
                 <div class="form2 form-group">
                     <label for="nombre">Nombre </label>
@@ -81,6 +84,8 @@
                     <button id="mc2" type="submit" (click)="ver2()">Mostrar Comentarios</button>
                 </div>
             </div>
+        </form>
+
             <div class=" table tabla2" *ngIf="comentarios2.length>0 else noComen" [ngStyle]="{'visibility': visibilidad2}">
             <table>
                 <thead>
