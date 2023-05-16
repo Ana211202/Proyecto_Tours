@@ -1,14 +1,60 @@
+.feedback {
+    background-color: rgb(211, 224, 240);
+}
+
 .title {
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+label {
+    color: rgb(34, 63, 52);
+    font-weight: bold;
+    
+}
+
+p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+small {
+    color: rgb(95, 122, 112);
+}
+
+input {
+    text-align: center;
+    border:solid white 2px;
+    border-radius: 3px;
+    background-color: rgb(161, 179, 172);
 }
 
 .cajas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
+    padding-bottom: 25px;
 }
 .contenido, .pagina {
     border: solid 1px;
     border-radius: 5px;
     padding-bottom: 4px;
+    background-color: rgb(198, 216, 210);
 }
+
+#env1, #mc1, #env2, #mc2 {
+   height: 30px;
+   width: 180px;
+  
+}
+
+.table {
+    text-align: center;   
+}
+
+button {
+    border-radius: 5px;
+    border: solid white 2px;
+}
+
+
