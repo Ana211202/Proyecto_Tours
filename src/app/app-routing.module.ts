@@ -7,11 +7,13 @@ import { ReservaComponent } from './componentes/reserva/reserva.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { DestinosComponent } from './componentes/destinos/destinos.component';
 import { SearchComponent } from './componentes/search/search.component';
+import { TablareservasComponent } from './componentes/tablareservas/tablareservas.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "feedback", component: FeedbackComponent },
   { path: "reserva", component: ReservaComponent },
+  { path: "tablareservas", component: TablareservasComponent },
   { path: "nosotros", component: NosotrosComponent },
   { path: "tourlist", component: TourlistComponent },
   { path: "destinos", component: DestinosComponent },

@@ -18,32 +18,9 @@
     <button mat-raised-button color="accent" type="button"  type="submit">Reservar</button>
   </form>
 
-<div *ngIf="reservations.length > 0">
-  <h1>...RESERVACIONES...</h1>
-  <table class="table table-striped">
-      <thead>
-          <tr>
-            <th scope="col">DIA</th>
-            <th scope="col">FECHA</th>
-            <th scope="col">NOMBRE DEL TOUR</th>
-            <th scope="col">PRECIO DEL TOUR</th>
-          </tr>
-        </thead>
-        <tr *ngFor="let reservation of reservations">
-          <td >{{ reservation.date }}</td>
-          <td>{{ reservation.time }}</td>
-          <td>{{ reservedTours.name }}</td>
-      <td>$ {{reservedTours.price }}</td>
-        </tr>
-  </table>
   <div *ngIf="alertMessage" class="alert" [ngClass]="'alert-' + alertType" role="alert">
     {{ alertMessage }}
   </div>
 </div>
 
-<div *ngIf="reservations.length === 0">
-  <p>No hay reservaciones hechas.</p>
-</div>
-  
-</div>
  

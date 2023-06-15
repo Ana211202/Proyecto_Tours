@@ -55,21 +55,7 @@ export class ReservaComponent {
       this.alertType = 'success';
     }
   }
-  constructor(){
-    const reservationsString = localStorage.getItem('reservations');
-    this.reservations = reservationsString ? JSON.parse(reservationsString)
-      : [];
-      this.getReservedTours();
-  }
-
-  getReservedTours() {
-    // Recuperar los datos del localStorage
-    const storedTours = localStorage.getItem('reservedTours');
-    if (storedTours) {
-      // Convertir los datos a un objeto JavaScript
-      this.reservedTours = JSON.parse(storedTours);
-    }
-  }
+  
 
   tours = [
     {
@@ -86,8 +72,14 @@ export class ReservaComponent {
     }
   ];
   
-  onReserve(tour:any) {
-    console.log('Tour reservado:', tour);
+  onReserve(tour: any) {
+    // Obtener las reservaciones almacenadas en el localStorage
+    const reservedToursString = localStorage.getItem('reservedTours');
+    const reservedTours = reservedToursString ? JSON.parse(reservedToursString) : [];
+    // Agregar el nuevo tour al arreglo
+    reservedTours.push(tour);
+    // Guardar el arreglo actualizado en el localStorage
+    localStorage.setItem('reservedTours', JSON.stringify(reservedTours));
   }
 
 

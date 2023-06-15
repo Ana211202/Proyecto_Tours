@@ -25,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { TablareservasComponent } from './componentes/tablareservas/tablareservas.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     TourlistComponent,
     DestinosComponent,
     SearchComponent,
-    VideoPipe
+    VideoPipe,
+    TablareservasComponent
   ],
   imports: [
     BrowserModule,
