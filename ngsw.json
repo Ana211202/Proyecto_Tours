@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1685493985946,
+  "timestamp": 1686854056612,
   "index": "https://ana211202.github.io/Proyecto_Tours/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "https://ana211202.github.io/Proyecto_Tours/favicon.ico",
         "https://ana211202.github.io/Proyecto_Tours/index.html",
-        "https://ana211202.github.io/Proyecto_Tours/main.46d41fdcaa775ba1.js",
+        "https://ana211202.github.io/Proyecto_Tours/main.3efc0ae87a0e58e2.js",
         "https://ana211202.github.io/Proyecto_Tours/manifest.webmanifest",
         "https://ana211202.github.io/Proyecto_Tours/polyfills.69da89070b8170f2.js",
         "https://ana211202.github.io/Proyecto_Tours/runtime.4014ae5be541f2d1.js",
         "https://ana211202.github.io/Proyecto_Tours/scripts.ef8e7d6490ae627f.js",
-        "https://ana211202.github.io/Proyecto_Tours/styles.38d71203fcca0dc6.css"
+        "https://ana211202.github.io/Proyecto_Tours/styles.843c484b1096ff19.css"
       ],
       "patterns": []
     },
@@ -147,13 +147,13 @@
     "https://ana211202.github.io/Proyecto_Tours/assets/video/video3.mp4": "9e45243a0c05b08b2e350c774534e839f50289d3",
     "https://ana211202.github.io/Proyecto_Tours/favicon.ico": "a836ad5fdd9342fe918a3580e06f8c27cfb9a74e",
     "https://ana211202.github.io/Proyecto_Tours/fondoreser.02c7f3c2a15034d8.jpg": "903f581bbbce0fc97be814630634425bce35d8e0",
-    "https://ana211202.github.io/Proyecto_Tours/index.html": "39509dd0e744cc52cea438c29fe1f6adb42e72b6",
-    "https://ana211202.github.io/Proyecto_Tours/main.46d41fdcaa775ba1.js": "aaddd16eef0f754e5986d9c8f45cb76020eb3686",
+    "https://ana211202.github.io/Proyecto_Tours/index.html": "01e621cf834f0857ac539bb1a5638b2fe62e8220",
+    "https://ana211202.github.io/Proyecto_Tours/main.3efc0ae87a0e58e2.js": "c92438cbbf8514737fb17ba9ff6e9a1ca4b6842e",
     "https://ana211202.github.io/Proyecto_Tours/manifest.webmanifest": "bae98526a41a2a854b2985f69052c84c3d809da4",
     "https://ana211202.github.io/Proyecto_Tours/polyfills.69da89070b8170f2.js": "c714f24051c1b7fe368f0e093e2514deaf448bdf",
     "https://ana211202.github.io/Proyecto_Tours/runtime.4014ae5be541f2d1.js": "ae9d3d1a24708cde50d92e6ff8d9755e0a55a40c",
     "https://ana211202.github.io/Proyecto_Tours/scripts.ef8e7d6490ae627f.js": "d3df39bfa0764e7ebebb365925d1b6e11f42e190",
-    "https://ana211202.github.io/Proyecto_Tours/styles.38d71203fcca0dc6.css": "d7f99d5bd6c267a224040158f1a03f9ac1388de0"
+    "https://ana211202.github.io/Proyecto_Tours/styles.843c484b1096ff19.css": "5d608f1bb9a9d6f695e676022864abe2ac7d8826"
   },
   "navigationUrls": [
     {
