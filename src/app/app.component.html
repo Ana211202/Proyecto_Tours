@@ -1,7 +1,31 @@
+<div class="accessibility-bar">
+  <button class="accessibility-toggle" (click)="toggleAccessibilityMenu()" aria-label="Toggle accessibility menu">
+    <i class="fas fa-universal-access"></i>
+  </button>
 
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-
-
-
-<app-pie></app-pie>
+    <div class="accessibility-menu" [class.show]="accessibilityMenuVisible">
+      <button (click)="toggleScreenReader()" [attr.aria-pressed]="screenReaderEnabled ? 'true' : 'false'" aria-label="Toggle screen reader">
+        <i class="fas fa-assistive-listening-systems"></i>
+      </button>
+  
+      <button (click)="increaseFontSize()" aria-label="Increase font size">
+        <i class="fas fa-plus"></i>
+      </button>
+  
+      <button (click)="decreaseFontSize()" aria-label="Decrease font size">
+        <i class="fas fa-minus"></i>
+      </button>
+  
+      <button (click)="toggleHideImages()" [attr.aria-pressed]="hideImagesEnabled ? 'true' : 'false'" aria-label="Toggle hide images">
+        <i class="fas fa-eye-slash"></i>
+      </button>
+  
+      <button (click)="toggleNavbarHighlight()">
+        {{ isNavbarHighlighted ? 'Desactivar Resaltado' : 'Activar Resaltado' }}
+      </button>
+    </div>
+  </div>
+  
+  <app-navbar [class.highlighted]="isNavbarHighlighted"></app-navbar>
+  <router-outlet></router-outlet>
+  <app-pie></app-pie>

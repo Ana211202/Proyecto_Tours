@@ -1,0 +1,64 @@
+.accessibility-bar {
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+  }
+  .accessibility-toggle {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .accessibility-toggle i {
+    font-size: 24px;
+  }
+  
+  .accessibility-menu {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    right: 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accessibility-menu.show {
+    display: block;
+  }
+  
+  .accessibility-menu button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .accessibility-menu button i {
+    font-size: 16px;
+  }
+  
+  .accessibility-menu button:hover {
+    background-color: #f2f2f2;
+  }
+  
+    
+    /* estilos para resaltado de menu*/
+    app-navbar.highlighted {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    
+    
