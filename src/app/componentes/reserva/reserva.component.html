@@ -1,21 +1,21 @@
 
   
 <div class="resertour">
-<h1>Tours Disponibles</h1>
-<ul>
-  <li *ngFor="let tour of tours">
+<h1 style="color: black; text-align: center;">Tours Disponibles</h1>
+<ul class="tour-list">
+  <li *ngFor="let tour of tours" class="tour-item">
     <app-tourlist [tour]="tour" (reserve)="onReserve($event)"></app-tourlist>
   </li>
 </ul>
 
-<form (ngSubmit)="onSubmit()" #reservationForm="ngForm">
-    <label for="date">Fecha:  </label>
-    <input type="date" id="date" name="date" ngModel>
+<form (ngSubmit)="onSubmit()" #reservationForm="ngForm" class="datetime-container">
+    <label for="date" class="date-label">Fecha:  </label>
+    <input type="date" id="date" name="date" ngModel class="date-input">
     <br>
-    <label for="time">Hora:  </label>
-    <input type="time" id="time" name="time" ngModel>
+    <label for="time" class="time-label">Hora:  </label>
+    <input type="time" id="time" name="time" ngModel class="time-input">
     <br>
-    <button mat-raised-button color="accent" type="button"  type="submit">Reservar</button>
+    <button mat-raised-button color="accent" type="button"  type="submit" class="reserve-button">Reservar</button>
   </form>
 
   <div *ngIf="alertMessage" class="alert" [ngClass]="'alert-' + alertType" role="alert">

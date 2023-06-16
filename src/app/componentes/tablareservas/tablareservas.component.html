@@ -1,6 +1,6 @@
-<div *ngIf="reservations.length > 0">
-    <h1>...RESERVACIONES...</h1>
-    <table class="table table-striped">
+<div *ngIf="reservations.length > 0" class="reservations-container">
+    <h1 style="color: black; text-align: center;">...RESERVACIONES...</h1>
+    <table class="table table-striped reservations-table">
         <thead>
             <tr>
               <th scope="col">DIA</th>
@@ -9,12 +9,13 @@
               <th scope="col">PRECIO DEL TOUR</th>
             </tr>
           </thead>
-          <tr *ngFor="let reservation of reservations">
-            <td >{{ reservation.date }}</td>
+          <tr *ngFor="let reservation of reservations; let i = index">
+            <td>{{ reservation.date }}</td>
             <td>{{ reservation.time }}</td>
-            <td>{{ reservedTours.name }}</td>
-        <td>$ {{reservedTours.price }}</td>
+            <td>{{ reservedTours[i].name }}</td>
+            <td>$ {{ reservedTours[i].price }}</td>
           </tr>
+          
     </table>
 
   
