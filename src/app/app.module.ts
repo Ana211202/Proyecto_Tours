@@ -30,6 +30,10 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { LoginComponent } from './componentes/login/login.component';
+import { SignupComponent } from './componentes/signup/signup.component';
+import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
+import { UsersComponent } from './componentes/users/users.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
     DestinosComponent,
     SearchComponent,
     VideoPipe,
-    TablareservasComponent
+    TablareservasComponent,
+    LoginComponent,
+    SignupComponent,
+    LoginPhoneComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

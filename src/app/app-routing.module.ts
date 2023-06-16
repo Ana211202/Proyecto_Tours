@@ -8,6 +8,8 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { DestinosComponent } from './componentes/destinos/destinos.component';
 import { SearchComponent } from './componentes/search/search.component';
 import { TablareservasComponent } from './componentes/tablareservas/tablareservas.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { SignupComponent } from './componentes/signup/signup.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: "nosotros", component: NosotrosComponent },
   { path: "tourlist", component: TourlistComponent },
   { path: "destinos", component: DestinosComponent },
+  { path: "login", component: LoginComponent},
+  { path: "signup", component: SignupComponent},
   { path: "search", component: SearchComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home" }
