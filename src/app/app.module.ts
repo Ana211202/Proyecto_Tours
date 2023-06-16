@@ -34,7 +34,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { SignupComponent } from './componentes/signup/signup.component';
 import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
 import { UsersComponent } from './componentes/users/users.component';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,8 @@ import { UsersComponent } from './componentes/users/users.component';
     MatIconModule,
     HttpClientModule,
     MatSnackBarModule,
+    AngularFireModule,
+    AngularFireAuthModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -78,7 +82,7 @@ import { UsersComponent } from './componentes/users/users.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
   ],
-  providers: [],
+  providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
