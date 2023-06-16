@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "proyectotours-81d94": {
+      "hosting": {
+        "ProyectoTours": [
+          "proyectofinaltours"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "proyectotours-81d94"
+  }
+}
