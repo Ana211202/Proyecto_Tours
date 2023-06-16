@@ -1,0 +1,13 @@
+.reservations-container {
+    background-image: url('../../../assets/images/seul.jpg');
+    background-size: cover;
+  }
+
+  .table {
+    background-color: rgb(255, 247, 235);
+  }
+
+  .reservations-table {
+    width: 80%;
+    margin: 0 auto;
+  }

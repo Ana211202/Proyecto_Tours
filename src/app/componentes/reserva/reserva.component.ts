@@ -59,28 +59,33 @@ export class ReservaComponent {
 
   tours = [
     {
-      name: 'Tour a Seul Corea',
+      name: 'SEUL (COREA DEL SUR)',
       price: 5000
     },
     {
-      name: 'Tour Machu Picchu Peru',
+      name: ' MACHU PICCHU (PERU)',
       price: 4000
     },
     {
-      name: 'Tour a Petra Jordania',
+      name: 'RIO DE JANEIRO (BRASIL)',
+      price: 2500
+    },
+    {
+      name: 'CHICHEN ITZÁ (MÉXICO)',
       price: 3500
+    },
+    {
+      name: 'EL COLISEO (ITALIA)',
+      price: 3500
+    },
+    {
+      name: 'PETRA (JORDANIA)',
+      price: 4500
     }
   ];
   
-  onReserve(tour: any) {
-    // Obtener las reservaciones almacenadas en el localStorage
-    const reservedToursString = localStorage.getItem('reservedTours');
-    const reservedTours = reservedToursString ? JSON.parse(reservedToursString) : [];
-    // Agregar el nuevo tour al arreglo
-    reservedTours.push(tour);
-    // Guardar el arreglo actualizado en el localStorage
-    localStorage.setItem('reservedTours', JSON.stringify(reservedTours));
+  onReserve(tour:any) {
+    console.log('Tour reservado:', tour);
   }
-
 
 }

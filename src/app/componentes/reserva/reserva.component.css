@@ -3,6 +3,63 @@
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
-color: azure;
+color: rgb(0, 0, 0);
+
 
 }
+
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tour-item {
+    margin: 45px;
+    padding:15px ;
+    border: solid black 2px;
+    width:34%;
+    height: auto;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(255, 228, 218);
+    color:rgb(69, 69, 69);
+     width: calc(100% / 4);
+
+  }
+
+  .datetime-container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+margin: 70px;
+
+  }
+
+  .date-input,
+.time-input {
+ margin: 40px;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  box-sizing:border-box;
+  border:solid #ccc 1px;
+  transition:.5s ease all;
+
+}
+.date-label,
+.time-label {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family:'Times New Roman', Times, serif;
+ 
+}
+
+.reserve-button {
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border:solid #040404 1px;
+   
+  }
