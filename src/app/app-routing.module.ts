@@ -11,6 +11,7 @@ import { TablareservasComponent } from './componentes/tablareservas/tablareserva
 import { LoginComponent } from './componentes/login/login.component';
 import { SignupComponent } from './componentes/signup/signup.component';
 import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
+import { GraficasComponent } from './componentes/graficas/graficas.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: "loginPhone", component: LoginPhoneComponent},
   { path: "signup", component: SignupComponent},
   { path: "search", component: SearchComponent },
+  { path: "graficas", component: GraficasComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home" }
 ];
