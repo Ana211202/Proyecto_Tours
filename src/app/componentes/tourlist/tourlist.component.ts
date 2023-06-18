@@ -21,7 +21,7 @@ getSelectedTour(){
   if(localStorage.getItem('tourSelection')){
     return localStorage.getItem('tourSelection');
   } else {
-    return "a";
+    return "Ninguno";
   }
   
 }

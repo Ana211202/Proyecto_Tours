@@ -26,7 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TablareservasComponent } from './componentes/tablareservas/tablareservas.component';
-<<<<<<< Updated upstream
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -38,10 +37,8 @@ import { UsersComponent } from './componentes/users/users.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-=======
 import { GraficasComponent } from './componentes/graficas/graficas.component';
 
->>>>>>> Stashed changes
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,14 +55,11 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     SearchComponent,
     VideoPipe,
     TablareservasComponent,
-<<<<<<< Updated upstream
     LoginComponent,
     SignupComponent,
     LoginPhoneComponent,
-    UsersComponent
-=======
+    UsersComponent,
     GraficasComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
