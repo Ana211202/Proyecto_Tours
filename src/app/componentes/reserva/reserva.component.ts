@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { getDatabase, set, ref, update } from '@angular/fire/database';
+import { Database } from '@angular/fire/database';
+import { Router } from '@angular/router';
+import { OnInit } from '@angular/core';
+import { AunthenticationService } from '../services/aunthentication.service';
 
 @Component({
   selector: 'app-reserva',
@@ -49,8 +54,17 @@ export class ReservaComponent {
       this.alertType = 'danger';
     } else {
       // Agregar la nueva reservación al localStorage
-      reservations.push({ date, time });
-      localStorage.setItem('reservations', JSON.stringify(reservations));
+      set(ref(this.database, 'reservas/' + value.tours), {
+        /*username: value.username,
+        firstname: value.firstname,
+        lastname: value.lastname,
+        email: value.email,
+        password: value.password
+        */
+       tour: value.tours,
+       date: value.date,
+       hour: value.time
+      });
       this.alertMessage = 'Reservación realizada con éxito.';
       this.alertType = 'success';
     }

@@ -45,9 +45,11 @@
           <!-- Form end -->
 
           <div>
-            <label for="code">Ingresa tu código de verificación</label>
+            <br><hr>
+            <h3>¿Ya tienes tu código?</h3>
+            <label for="code">Ingresa tu código de verificación: </label>
             <input type="text" name="code" [(ngModel)]="verificationCode" class="input">
-            <br><button (click)="verifyLoginCode()">Verificar</button>
+            <br><button class="btn btn-primary btn-customized mt-4" (click)="verifyLoginCode()">Verificar</button>
           </div>
         </div>
         </div>

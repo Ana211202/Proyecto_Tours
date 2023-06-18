@@ -10,6 +10,7 @@ import { SearchComponent } from './componentes/search/search.component';
 import { TablareservasComponent } from './componentes/tablareservas/tablareservas.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SignupComponent } from './componentes/signup/signup.component';
+import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: "tourlist", component: TourlistComponent },
   { path: "destinos", component: DestinosComponent },
   { path: "login", component: LoginComponent},
+  { path: "loginPhone", component: LoginPhoneComponent},
   { path: "signup", component: SignupComponent},
   { path: "search", component: SearchComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
