@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 
+/* import { NgxSpinnerModule } from 'ngx-spinner'; */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedbackComponent } from './componentes/feedback/feedback.component';
@@ -67,7 +68,7 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     GraficasComponent
   ],
   imports: [
-    //NgxSpinnerModule,
+    /* NgxSpinnerModule, */
     BrowserModule,
     AppRoutingModule,
     FormsModule,

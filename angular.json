@@ -25,13 +25,12 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "node_modules/ngx-spinner/animations/ball-newton-cradle.css",
+            "styles": [            
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css"  ,
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": [
-              
+            "scripts": [              
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
