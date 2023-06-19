@@ -19,6 +19,13 @@ export class ReservaComponent {
   reservedTours: any;
   tour: any;
 
+  onSubmit(value: any){
+
+  }
+
+
+
+
   registerTour(value: any) {
     const date = (<HTMLInputElement>document.getElementById('date')).value;
     const time = (<HTMLInputElement>document.getElementById('time')).value;
@@ -47,7 +54,7 @@ export class ReservaComponent {
      hour: value.time
     });
     
-    alert("usuario creado");
+    alert("Reserva realizada");
     this.goToPage("inicio");
     /* <button (click)="router.navigate(['/master']);">
      <span>Go to master Page</span>
@@ -61,7 +68,7 @@ export class ReservaComponent {
 
   getSelectedTour(){
     if(localStorage.getItem('tourSelection')){
-      return localStorage.getItem('tourSelection');
+      return localStorage.getItem('tourSelection')?.valueOf();
     } else {
       return this.tours[0].name;
     }

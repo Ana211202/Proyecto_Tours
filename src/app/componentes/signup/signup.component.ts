@@ -11,50 +11,45 @@ import { AunthenticationService } from '../services/aunthentication.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  // Initialize Firebase
-  email : string = '';
-  password : string = '';
-  phone : string = '';
-  constructor(public database: Database, private router: Router, private auth : AunthenticationService){
+  username: string = '';
+  firstname: string = '';
+  lastname: string = '';
+  email: string = '';
+  password: string = '';
+  phone: string = '';
+  showSuccessAlert: boolean = false;
+  showErrorAlert: boolean = false;
 
-  }
-  
- goToPage(pageName:string){
+  constructor(public database: Database, private router: Router, private auth: AunthenticationService) { }
+
+  goToPage(pageName: string) {
     this.router.navigate([`${pageName}`]);
   }
 
-  registerUser(value: any){
-    if(this.email == '') {
-      alert('Please enter email');
+  registerUser() {
+    if (this.username === '' || this.firstname === '' || this.lastname === '' ||
+        this.email === '' || this.password === '' || this.phone === '') {
+      this.showErrorAlert = true;
       return;
     }
 
-    if(this.password == '') {
-      alert('Please enter password');
-      return;
-    }
-
-    if(this.phone == ''){
-      alert('Please enter phone number');
-      return;
-    }
-    set(ref(this.database, 'users/' + value.username), {
-      username: value.username,
-      firstname: value.firstname,
-      lastname: value.lastname,
-      email: value.email,
-      password: value.password,
-      phone: value.phone
+    set(ref(this.database, 'users/' + this.username), {
+      username: this.username,
+      firstname: this.firstname,
+      lastname: this.lastname,
+      email: this.email,
+      password: this.password,
+      phone: this.phone
     });
-    
+
     this.auth.register(this.email, this.password);
 
-    alert("usuario creado");
-    this.goToPage("inicio");
-    /* <button (click)="router.navigate(['/master']);">
-     <span>Go to master Page</span>
-     </button>*/
-     
+    this.showSuccessAlert = true;
+    this.goToPage('inicio');
+  }
+
+  closeAlert() {
+    this.showSuccessAlert = false;
+    this.showErrorAlert = false;
   }
 }
-

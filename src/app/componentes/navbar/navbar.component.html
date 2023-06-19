@@ -26,24 +26,38 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/nosotros" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Acerca de Nosotros</a>
+          </li>                    
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contactform" style="color: #ffffff; font-family:'Times New Roman', Times, serif">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Iniciar sesión</a>
+            <a class="nav-link" routerLink="/preguntas-f" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/signup" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contactform" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Contacto</a>
-          </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'true'">
             <a class="nav-link" routerLink="/graficas" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Grafica</a>
           </li>
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'no'">
+            <a class="btn btn-primary btn-customized align-items-center" routerLink="/login" style="background-color: rgb(231, 51, 171); color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Iniciar sesión</a>
+          </li>
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'no'">
+            <a class="btn btn-primary btn-customized align-items-center" routerLink="/signup" style="background-color: rgb(125, 228, 231);color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Registrarse</a>
+          </li>
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'true'" style="text-align: center;">
+            <button class="btn btn-primary btn-customized align-items-center" (click)="auth.logout()" style="background-color: rgb(255, 65, 65); color: white">
+              Cerrar sesión
+            </button>
+          </li>
+        
         </ul>
+        
+        
+        
         <form class="d-flex" (submit)="buscar()">
           <input id="buscar" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" [(ngModel)]="searchTerm">
           <button class="btn btn-outline-success" type="submit" style="border-color: azure;">Buscar</button>
-        </form>
+        </form> 
+
+        
       </div>
     </div>
   </nav>
