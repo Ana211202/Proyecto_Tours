@@ -38,6 +38,7 @@ import { UsersComponent } from './componentes/users/users.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { SearchResultsComponent } from './search-results/search-results.component';
 =======
 import { GraficasComponent } from './componentes/graficas/graficas.component';
 
@@ -62,7 +63,8 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     LoginComponent,
     SignupComponent,
     LoginPhoneComponent,
-    UsersComponent
+    UsersComponent,
+    SearchResultsComponent
 =======
     GraficasComponent
 >>>>>>> Stashed changes

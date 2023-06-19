@@ -31,12 +31,10 @@
             <a class="nav-link" routerLink="/signup">Registrarse</a>
           </li>
         </ul>
-        <!-- 
-            <form class="d-flex" role="search">
-                <input id="buscar" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit" (click)="buscar()">Buscar</button>
-            </form>   
-        -->
+        <form class="d-flex" (submit)="buscar()">
+          <input id="buscar" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" [(ngModel)]="searchTerm">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
       </div>
     </div>
   </nav>

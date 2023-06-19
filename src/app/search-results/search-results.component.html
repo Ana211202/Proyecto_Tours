@@ -1,0 +1,11 @@
+<h2>Resultados de búsqueda para "{{ searchTerm }}"</h2>
+
+<ul *ngIf="searchResults.length > 0; else noResults">
+  <li *ngFor="let result of searchResults">
+    {{ result.name }} - {{ result.type }}
+  </li>
+</ul>
+
+<ng-template #noResults>
+  <p>No se encontraron resultados. Por el momento no esta disponible ese tour</p>
+</ng-template>
