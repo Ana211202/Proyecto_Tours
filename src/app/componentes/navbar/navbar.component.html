@@ -4,37 +4,40 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/destinos">Destinos</a>
+            <a class="nav-link" routerLink="/destinos" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif" >Destinos</a>
+          </li>
+       
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/search" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Buscar Aeropuerto</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/feedback" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Feedback</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/reserva" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Reservar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/search">Buscar Aeropuerto</a>
+            <a class="nav-link" routerLink="/tablareservas" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Reservaciones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/feedback">Feedback</a>
+            <a class="nav-link" routerLink="/nosotros" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Acerca de Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/reserva">Reservar</a>
+            <a class="nav-link" routerLink="/login" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Iniciar sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/tablareservas">Reservaciones</a>
+            <a class="nav-link" routerLink="/signup" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Registrarse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/nosotros">Acerca de Nosotros</a>
+            <a class="nav-link" routerLink="/contactform" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login">Iniciar sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/signup">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contactform">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/graficas">Grafica</a>
+            <a class="nav-link" routerLink="/graficas" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Grafica</a>
           </li>
         </ul>
         <form class="d-flex" (submit)="buscar()">

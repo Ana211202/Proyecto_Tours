@@ -1,0 +1,51 @@
+/* Estilos para el navbar */
+.navbar {
+  background-color: #ffffff; /* Color de fondo del navbar */
+  padding: 10px 0; /* Espacio interno del navbar */
+  font-family: Arial, sans-serif; /* Fuente del texto del navbar */
+  
+}
+
+.navbar-brand img {
+  width: 80px; /* Ancho del logo */
+  height: 70px; /* Altura del logo */
+}
+
+.navbar-toggler-icon {
+  background-color: #000000; /* Color del icono del botón de navegación */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px; /* Espacio entre elementos de la lista */
+}
+
+.nav-link {
+
+  font-weight: bold; /* Peso de la fuente del texto de los enlaces */
+  font-size: 14px; /* Tamaño de la fuente del texto de los enlaces */
+}
+
+.nav-link:hover {
+  color: #17a2b8; /* Color del texto de los enlaces al pasar el mouse */
+  text-decoration: none; /* Eliminar subrayado al pasar el mouse */
+}
+
+.navbar-collapse {
+  justify-content: flex-end; /* Alinear los elementos del navbar a la derecha */
+}
+
+.form-control {
+  width: 200px; /* Ancho del campo de búsqueda */
+  font-size: 14px; /* Tamaño de la fuente del campo de búsqueda */
+}
+
+.btn-outline-success {
+  color: #ff4ed3; /* Color del texto del botón de búsqueda */
+  border-color: #789eff; /* Color del borde del botón de búsqueda */
+  font-size: 14px; /* Tamaño de la fuente del botón de búsqueda */
+}
+
+.btn-outline-success:hover {
+  background-color: #ffa0f1; /* Color de fondo del botón de búsqueda al pasar el mouse */
+  color: #0905ff; /* Color del texto del botón de búsqueda al pasar el mouse */
+}
