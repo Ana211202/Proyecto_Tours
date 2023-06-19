@@ -39,7 +39,8 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SearchResultsComponent } from './componentes/search-results/search-results.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
-import { PreguntasFComponent } from './preguntas-f/preguntas-f.component';
+import { PreguntasFComponent } from './componentes/preguntas-f/preguntas-f.component';
+
 
 @NgModule({
   declarations: [
