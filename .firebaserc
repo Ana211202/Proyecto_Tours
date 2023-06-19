@@ -6,9 +6,16 @@
           "proyectotours-81d94"
         ]
       }
+    },
+    "proyectotours-93653": {
+      "hosting": {
+        "ProyectoTours": [
+          "proyectotours-93653"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "proyectotours-81d94"
+    "default": "proyectotours-93653"
   }
 }
