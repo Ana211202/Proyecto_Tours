@@ -41,6 +41,7 @@ import { SearchResultsComponent } from './componentes/search-results/search-resu
 import { GraficasComponent } from './componentes/graficas/graficas.component';
 import { ContactformComponent } from './componentes/contactform/contactform.component';
 import { PipepPipe } from './pipes/pipep.pipe';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -68,12 +69,12 @@ import { PipepPipe } from './pipes/pipep.pipe';
     PipepPipe
   ],
   imports: [
-    /* NgxSpinnerModule, */
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule,
     MatCardModule,
     MatButtonModule,
     MatGridListModule,

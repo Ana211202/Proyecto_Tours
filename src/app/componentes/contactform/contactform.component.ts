@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EnviarService } from 'src/app/services/enviar.service';
 import { FormControl, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-contactform',
@@ -12,7 +13,7 @@ export class ContactformComponent implements OnInit{
   texto="estamos encantados de recibir tus comentarios";
   texto2="";
 
-  constructor(private enviar:EnviarService) {
+  constructor(private enviar:EnviarService, private spinner:NgxSpinnerService) {
 
   }
   
@@ -38,6 +39,10 @@ export class ContactformComponent implements OnInit{
   }
 
   onSubmit():any {
+    this.spinner.show();
+    setTimeout(()=> {
+      this.spinner.hide();
+    }, 3000);
     let email=this.user.value.correo;
     let nombre=this.user.value.nombre;
     let apellido=this.user.value.apellido;
