@@ -1,4 +1,4 @@
-import { NgModule, isDevMode } from '@angular/core';
+import { NgModule, isDevMode, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
@@ -39,6 +39,9 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SearchResultsComponent } from './componentes/search-results/search-results.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
+import { ContactformComponent } from './componentes/contactform/contactform.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { PipepPipe } from './pipep.pipe';
 
 @NgModule({
   declarations: [
@@ -61,9 +64,12 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     LoginPhoneComponent,
     UsersComponent,
     SearchResultsComponent,
-    GraficasComponent
+    GraficasComponent,
+    ContactformComponent,
+    PipepPipe
   ],
   imports: [
+    NgxSpinnerModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -87,7 +93,9 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase}],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

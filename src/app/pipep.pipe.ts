@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PipepPipe implements PipeTransform {
 
-   transform(value: unknown, ...args: unknown[]): unknown {
+  transform(value: unknown, ...args: unknown[]): unknown {
     return "Gracias por contactarte.";
   }
 

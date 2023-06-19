@@ -10,7 +10,7 @@ export class EnviarService {
 
   constructor(private http:HttpClient) { }
 
-  sendEmail(_body: { email: any; }) {
+  sendEmail(_body: { email: any, nombre:any, apellido:any, mensaje:any }) {
     return this.http.post(this.url,_body);
     
   }
