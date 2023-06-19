@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 
-/* import { NgxSpinnerModule } from 'ngx-spinner'; */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedbackComponent } from './componentes/feedback/feedback.component';
@@ -40,12 +39,11 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SearchResultsComponent } from './componentes/search-results/search-results.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
-//import { NgxSpinnerModule } from 'ngx-spinner';
-//import { PipepPipe } from './pipep.pipe';
+import { ContactformComponent } from './componentes/contactform/contactform.component';
+import { PipepPipe } from './pipes/pipep.pipe';
 
 @NgModule({
   declarations: [
-    //PipepPipe,
     AppComponent,
     FeedbackComponent,
     GaleriaComponent,
@@ -65,7 +63,9 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     LoginPhoneComponent,
     UsersComponent,
     SearchResultsComponent,
-    GraficasComponent
+    GraficasComponent,
+    ContactformComponent,
+    PipepPipe
   ],
   imports: [
     /* NgxSpinnerModule, */
