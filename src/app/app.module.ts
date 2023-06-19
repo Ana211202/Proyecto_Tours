@@ -40,9 +40,11 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SearchResultsComponent } from './componentes/search-results/search-results.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { PipepPipe } from './pipep.pipe';
 
 @NgModule({
   declarations: [
+    PipepPipe,
     AppComponent,
     FeedbackComponent,
     GaleriaComponent,
