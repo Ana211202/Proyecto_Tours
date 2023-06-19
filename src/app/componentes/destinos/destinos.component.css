@@ -43,7 +43,7 @@ body {
 }
 
 .galeria {
-    background-color: rgb(211, 224, 240);
+    background-image: linear-gradient(to bottom, #c7e6ff, #9ad4ff, #5bc0de, #4ca8d7, #79d6f2);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
 }

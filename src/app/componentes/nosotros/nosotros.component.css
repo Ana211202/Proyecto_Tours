@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: rgb(204, 238, 238);
+    background-image: linear-gradient(to bottom, #c7e6ff, #9ad4ff, #5bc0de, #4ca8d7, #79d6f2);
   }
   
   a {

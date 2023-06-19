@@ -1,21 +1,5 @@
-<h1>{{ title }}</h1>
-<div class="chart-container">
-  <canvas #myChart></canvas>
+<div class="fondo">
+  <div style="width: 400px; height: 300px;">
+    <canvas id="barChart"></canvas>
+  </div>
 </div>
-
-
-<div>
-  <table class="table">
-    <tr>
-    <th>País</th>
-    <th>Valor</th>
-    </tr>
-    <tr *ngFor="let dato of datosTabla; let i = index">
-    <td>{{ xValues[i] }}</td>
-    <td>{{ dato }}</td>
-    </tr>
-   </table>
-</div>
-
-
-<button (click)="actualizarGrafico()" class="btn btn-outline-primary">Actualizar</button>

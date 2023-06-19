@@ -1,4 +1,22 @@
 .chart-container {
+
     width: 500px; /* Ajusta el ancho deseado */
     height: 400px; /* Ajusta la altura deseada */
+      display: flex !important;
+  justify-content: center !important;
+  align-items:center!important;
+  margin: auto ;
+
   }
+
+.fondo{
+  background-image: linear-gradient(to bottom, #c7e6ff, #9ad4ff, #5bc0de, #4ca8d7, #79d6f2);
+  
+
+}
+h1 {
+  font-size: 30px;
+  color: rgb(4, 4, 4);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}

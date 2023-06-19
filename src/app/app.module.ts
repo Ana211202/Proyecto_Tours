@@ -37,11 +37,7 @@ import { UsersComponent } from './componentes/users/users.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-<<<<<<< HEAD
 import { SearchResultsComponent } from './search-results/search-results.component';
-=======
-=======
->>>>>>> e289f227b8384d51acd9aef36a4fc7b3344727b3
 import { GraficasComponent } from './componentes/graficas/graficas.component';
 
 @NgModule({
@@ -64,11 +60,7 @@ import { GraficasComponent } from './componentes/graficas/graficas.component';
     SignupComponent,
     LoginPhoneComponent,
     UsersComponent,
-<<<<<<< HEAD
-    SearchResultsComponent
-=======
-=======
->>>>>>> e289f227b8384d51acd9aef36a4fc7b3344727b3
+    SearchResultsComponent,
     GraficasComponent
   ],
   imports: [
