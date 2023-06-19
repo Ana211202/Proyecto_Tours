@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EnviarService } from 'src/app/enviar.service';
+import { EnviarService } from 'src/app/services/enviar.service';
 import { FormControl, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -9,14 +9,14 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./contactform.component.css']
 })
 export class ContactformComponent implements OnInit{
-
   user!:FormGroup;
   texto="estamos encantados de recibir tus comentarios";
   texto2="";
-  correo!:string;
 
-  constructor(private spinner:NgxSpinnerService, private enviar:EnviarService) { }
+  constructor(private enviar:EnviarService, private spinner:NgxSpinnerService) {
 
+  }
+  
   private validateEdad(control: AbstractControl):ValidationErrors|null {
     if(parseInt(control.value)<18) {
          return {validateEdad:true}
@@ -38,16 +38,11 @@ export class ContactformComponent implements OnInit{
     
   }
 
-  ngOnInit(): void {
-    this.createForm();
-  }
-
   onSubmit():any {
     this.spinner.show();
     setTimeout(()=> {
       this.spinner.hide();
-    }, 3000)
-    //limpiar formulario
+    }, 3000);
     let email=this.user.value.correo;
     let nombre=this.user.value.nombre;
     let apellido=this.user.value.apellido;
@@ -62,6 +57,10 @@ export class ContactformComponent implements OnInit{
       console.log(data);
     });
     this.user.reset();
+  }
+
+  ngOnInit(): void {
+    this.createForm();
   }
 
 }

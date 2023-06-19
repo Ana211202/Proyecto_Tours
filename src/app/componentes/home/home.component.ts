@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 interface Image {
   url: string;
   description: string;
 }
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  X = Math.round(Math.random()*(3-1)+1);
+  handleSearch(value: string){
+    console.log(value)
+  } // Agrega esta línea para definir la propiedad X
 
   images: Image[] = [
     { url: 'assets/images/img1.jpg', description: 'PLAYA DEL CARMEN' },
@@ -25,5 +30,9 @@ export class HomeComponent {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action);
+  }
+
+  onRightClick() { // Agrega esta función para definir onRightClick
+    // Aquí puedes agregar el código que quieres ejecutar cuando el usuario haga clic derecho en el elemento
   }
 }

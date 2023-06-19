@@ -1,0 +1,36 @@
+
+
+.preguntasfr{
+    background-image: linear-gradient(to bottom, #c7e6ff, #9ad4ff, #5bc0de, #4ca8d7, #79d6f2);
+}
+.my-card-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .my-card-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+  }
+  
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  }
+  .card-body {
+    padding: 24px;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .card-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
