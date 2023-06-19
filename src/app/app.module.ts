@@ -39,12 +39,12 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SearchResultsComponent } from './componentes/search-results/search-results.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
-import { PipepPipe } from './pipep.pipe';
+//import { NgxSpinnerModule } from 'ngx-spinner';
+//import { PipepPipe } from './pipep.pipe';
 
 @NgModule({
   declarations: [
-    PipepPipe,
+    //PipepPipe,
     AppComponent,
     FeedbackComponent,
     GaleriaComponent,
@@ -67,7 +67,7 @@ import { PipepPipe } from './pipep.pipe';
     GraficasComponent
   ],
   imports: [
-    NgxSpinnerModule,
+    //NgxSpinnerModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

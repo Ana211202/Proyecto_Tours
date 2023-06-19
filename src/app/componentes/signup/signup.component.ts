@@ -17,6 +17,7 @@ export class SignupComponent {
   email: string = '';
   password: string = '';
   phone: string = '';
+  confirmPassword: string = '';
   showSuccessAlert: boolean = false;
   showErrorAlert: boolean = false;
 

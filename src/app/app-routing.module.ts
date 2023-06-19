@@ -12,9 +12,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { SignupComponent } from './componentes/signup/signup.component';
 import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
-import { ContactformComponent } from './componentes/contactform/contactform.component';
+//import { ContactformComponent } from './componentes/contactform/contactform.component';
 const routes: Routes = [
-  { path: "contactform", component: ContactformComponent},
+ // { path: "contactform", component: ContactformComponent},
   { path: "home", component: HomeComponent },
   { path: "feedback", component: FeedbackComponent },
   { path: "reserva", component: ReservaComponent },
