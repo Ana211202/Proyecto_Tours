@@ -73,7 +73,9 @@
 .titlegaleria {
     text-align: center;
 }
-
+.my-video {
+  border: none;
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;

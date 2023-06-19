@@ -41,20 +41,40 @@
 <div class="titlegaleria">
     <br>
     <br>
-    <h4>GALERÍA DE FOTOS</h4>
-    <h6>¡Esto es lo que se vive en nuestros viajes!</h6>
-    <br><br>
+    <h4>VIDEOS DE NUESTROS TOURS</h4>
+    <h6>¡Invertir en viajar es invertir en uno mismo!</h6>
+    
+</div>
+
+<div (contextmenu)="onRightClick()" style="display: flex; align-items: center; justify-content: center; height: 100vh; margin-top: -50px;">
+  <!-- Agregar tarjetas a la izquierda del video -->
+  <div class="card">
+    <img src="/assets/images/seul.jpg" alt="Image 1">
+    <p style="font-family: 'Times New Roman', Times, serif;">SEUL</p>
+    <img src="/assets/images/img1.jpg" alt="Image 2">
+    <p style="font-family: 'Times New Roman', Times, serif;">CANCUN</p>
+  </div>
+
+  <li>
+    {{X}}        
+     <video width="500" height="500" controls>
+         <source [src]="X | video" type="video/mp4">
+       </video>
+     
+   </li>
+
+  <!-- Agregar tarjetas a la derecha del video -->
+  <div class="card" style="margin-top: 10px;">
+    <img src="/assets/images/img4.jpg" alt="Image 3">
+    <p style="font-family: 'Times New Roman', Times, serif;">QUINTANA ROO</p>
+    <img src="/assets/images/img3.jpg" alt="Image 4">
+    <p style="font-family: 'Times New Roman', Times, serif;">JAPON</p>
+  </div>
 </div>
 
 
-<div class="gallery">
-  <mat-card class="card" *ngFor="let image of images">
-    <img mat-card-image [src]="image.url" alt="Image">
-    <mat-card-content>
-      <p>{{ image.description }}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
+
+
 
 <button mat-raised-button color="warn" class="mat-medium" (click)="openSnackBar('EMPIEZA A VIVIR TU VIAJE', 'Cerrar')">
   SUSCRIBETE
