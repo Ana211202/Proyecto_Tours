@@ -1,0 +1,38 @@
+<div class="cont">
+    <div class="contenedor">
+        <form [formGroup]="user" (ngSubmit)="onSubmit()" class="formulario">
+        <div class="pipe1">{{texto|uppercase}}</div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input formControlName="nombre" type="text" class="form-control" id="nombre" placeholder="Escriba su nombre">
+            <div class="error" *ngIf="user.get('nombre')?.errors?.['required'] && user.get('nombre')?.touched">Nombre es requerido</div>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input formControlName="apellido" type="text" class="form-control" id="apellido" placeholder="Escriba su apellido">
+            <div class="error" *ngIf="user.get('apellido')?.errors?.['required'] && user.get('apellido')?.touched">Apellido es requerido</div>
+        </div>
+        <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" formControlName="edad" class="form-control" id="edad" placeholder="Escriba su edad">
+            <div class="error" *ngIf="user.get('edad')?.errors?.['validateEdad'] && user.get('edad')?.touched" >La edad deber ser 18 o más</div>
+            <div class="error" *ngIf="user.get('edad')?.errors?.['required'] && user.get('edad')?.touched">Edad es requerido</div>
+        </div>
+        <div class="form-group">
+          <label for="correo">Email </label>
+          <input formControlName="correo" name="correo" type="email" class="form-control" id="correo"  placeholder="Escriba su email">
+          <div class="error" *ngIf="user.get('correo')?.errors?.['email'] && user.get('correo')?.touched">No es un formato válido</div>
+          <div class="error" *ngIf="user.get('correo')?.errors?.['required'] && user.get('correo')?.touched">Correo es requerido</div>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <input formControlName="mensaje" type="text" class="form-control" id="mensaje" placeholder="Escriba su mensaje">
+            <div class="error" *ngIf="user.get('mensaje')?.errors?.['required'] && user.get('mensaje')?.touched">Mensaje es requerido</div>
+        </div>
+        
+        <button [disabled]="user.invalid" type="submit" class="btn btn-primary">Enviar</button>
+        <ngx-spinner type="ball-newton-cradle" >
+            <p style="color: white">{{texto2|pipep}}</p>
+        </ngx-spinner>
+      </form>
+    </div>
