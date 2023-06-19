@@ -110,7 +110,7 @@ export class GraficasComponent implements OnInit {
       for(let i=0; i <  data.length;i++){
         const row = tbl.insertRow();
 
-        for(let j=0; j<=5; j++){
+        for(let j=1; j<=6; j++){
           const cell = row.insertCell();
           //console.log("["+i+"]" + "["+j+"]: " + Object.values(data[i])[j]);
           let aux : any; 

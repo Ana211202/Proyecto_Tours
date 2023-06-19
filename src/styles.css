@@ -8,7 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* You can add global styles to this file, and also import other style files */
 
 .fondoChido {
-    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(102, 102, 102));
+    background-image: linear-gradient(to bottom right, rgb(255, 96, 255), rgb(113, 234, 255));
     background-size: cover;
     min-height: 100vh;
 }

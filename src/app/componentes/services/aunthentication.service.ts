@@ -5,6 +5,16 @@ import { from } from 'rxjs';
 import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, ApplicationVerifier, RecaptchaVerifier} from '@angular/fire/auth'
 import { signInWithPhoneNumber } from 'firebase/auth';
 
+import { getDatabase, ref, onValue } from 'firebase/database';
+import { initializeApp } from "firebase/app";
+import { environment } from 'src/environments/environment';
+
+const app = initializeApp(environment.firebase);
+
+
+const db = getDatabase();
+const starCountRef = ref(db, 'users/');
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +26,7 @@ export class AunthenticationService {
   login(email: string, password: string){
     this.fireauth.signInWithEmailAndPassword(email,password).then( ()=> {
         localStorage.setItem('token', 'true');
+        this.getDatos(email);
         this.router.navigate(['/reservar']);
     },err =>{
         alert("Something went wrong");
@@ -47,6 +58,42 @@ export class AunthenticationService {
     })
   }
 
+  public getDatos(correo: string){
+    onValue(starCountRef, (snapshot) => {
+      var data : any[];
+
+      data = Object.values(snapshot.val()); //se tiene el array con objetos 
+      console.log("data onValue: " + Object.values(data)); //se tiene el segundo objeto en forma de array
+      
+      if(!data){
+        alert("No hay usuarios");
+        return;
+      }
+      
+      for(let i=0; i <  data.length;i++){
+          let aux : any;
+          aux = Object.values(data[i])[1];
+          if(aux==correo){
+            let auxDos = Object.values(data[i])[2];
+            if(typeof auxDos === 'string'){
+              localStorage.setItem("name", auxDos);
+            } else {
+              localStorage.setItem("name", "Usuario");
+            }
+            
+            let auxTres = Object.values(data[i])[6];
+            if(typeof auxTres === 'string'){
+              localStorage.setItem("username", auxTres);
+            } else {
+              localStorage.setItem("username", "anon");
+            }
+            break;
+          }
+      }
+    
+    
+    });
+  }
 
   
 }

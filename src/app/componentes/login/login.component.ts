@@ -3,6 +3,15 @@ import { FormGroup, Validators } from '@angular/forms';
 import { FormControl } from '@angular/forms'
 import { AunthenticationService } from '../services/aunthentication.service';
 import { Router } from '@angular/router';
+import { getDatabase, ref, onValue } from 'firebase/database';
+import { initializeApp } from "firebase/app";
+import { environment } from 'src/environments/environment';
+
+const app = initializeApp(environment.firebase);
+
+
+const db = getDatabase();
+const starCountRef = ref(db, 'users/');
 
 @Component({
   selector: 'app-login',
@@ -32,7 +41,13 @@ export class LoginComponent {
     }
 
     this.auth.login(this.email,this.password);
+    
+    //BUSCAR CON EMAIL
+
+
     this.email = '';
     this.password = '';
   }
+
+  
 }
