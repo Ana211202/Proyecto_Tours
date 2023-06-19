@@ -13,29 +13,26 @@ export class LoginComponent {
   
   email : string = '';
   password : string = '';
-
+  showModal: boolean = false;
+  modalMessage: string = '';
+  
   constructor(private auth : AunthenticationService){}
 
-
-
-  
   login() {
-
     if(this.email == '') {
-      alert('Please enter email');
+      this.modalMessage = 'Please enter email';
+      this.showModal = true;
       return;
     }
 
     if(this.password == '') {
-      alert('Please enter password');
+      this.modalMessage = 'Please enter password';
+      this.showModal = true;
       return;
     }
 
     this.auth.login(this.email,this.password);
     this.email = '';
     this.password = '';
-
   }
-
-  
 }
