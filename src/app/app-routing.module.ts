@@ -10,8 +10,12 @@ import { SearchComponent } from './componentes/search/search.component';
 import { TablareservasComponent } from './componentes/tablareservas/tablareservas.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SignupComponent } from './componentes/signup/signup.component';
+import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
+import { GraficasComponent } from './componentes/graficas/graficas.component';
+import { ContactoformComponent } from './componentes/contactoform/contactoform.component';
 
 const routes: Routes = [
+  { path: "contactform", component: ContactoformComponent},
   { path: "home", component: HomeComponent },
   { path: "feedback", component: FeedbackComponent },
   { path: "reserva", component: ReservaComponent },
@@ -20,8 +24,10 @@ const routes: Routes = [
   { path: "tourlist", component: TourlistComponent },
   { path: "destinos", component: DestinosComponent },
   { path: "login", component: LoginComponent},
+  { path: "loginPhone", component: LoginPhoneComponent},
   { path: "signup", component: SignupComponent},
   { path: "search", component: SearchComponent },
+  { path: "graficas", component: GraficasComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home" }
 ];

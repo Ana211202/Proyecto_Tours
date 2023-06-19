@@ -8,7 +8,7 @@
   </li>
 </ul>
 
-<form (ngSubmit)="onSubmit()" #reservationForm="ngForm" class="datetime-container">
+<form (ngSubmit)="registerTour(ReservaForm.value)" #ReservaForm="ngForm" class="datetime-container">
     <label for="date" class="date-label">Fecha:  </label>
     <input type="date" id="date" name="date" ngModel class="date-input">
     <br>

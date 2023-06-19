@@ -13,16 +13,17 @@ export class TourlistComponent {
 constructor(private router: Router) {}
 
 reserveTours() {
-  // Obtener los tours reservados almacenados en el localStorage
-  const reservedToursString = localStorage.getItem('reservedTours');
-  const reservedTours = reservedToursString ? JSON.parse(reservedToursString) : [];
-  // Agregar el nuevo tour al arreglo
-  reservedTours.push(this.tour);
-  // Guardar el arreglo actualizado en el localStorage
-  localStorage.setItem('reservedTours', JSON.stringify(reservedTours));
-  this.reserve.emit(this.tour);
+  localStorage.setItem('tourSelection', this.tour.name);
   this.router.navigate(['reserva']);
 }
 
+getSelectedTour(){
+  if(localStorage.getItem('tourSelection')){
+    return localStorage.getItem('tourSelection');
+  } else {
+    return "Ninguno";
+  }
+  
+}
 
 }
