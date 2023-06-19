@@ -15,6 +15,9 @@ export class SignupComponent {
   email : string = '';
   password : string = '';
   phone : string = '';
+  showModal: boolean = false;
+  modalMessage: string = '';
+  
   constructor(public database: Database, private router: Router, private auth : AunthenticationService){
 
   }
@@ -25,17 +28,20 @@ export class SignupComponent {
 
   registerUser(value: any){
     if(this.email == '') {
-      alert('Please enter email');
+      this.modalMessage = 'Please enter email';
+      this.showModal = true;
       return;
     }
 
     if(this.password == '') {
-      alert('Please enter password');
+      this.modalMessage = 'Please enter password';
+      this.showModal = true;
       return;
     }
 
     if(this.phone == ''){
-      alert('Please enter phone number');
+      this.modalMessage = 'Please enter phone number';
+      this.showModal = true;
       return;
     }
     set(ref(this.database, 'users/' + value.username), {
@@ -49,7 +55,8 @@ export class SignupComponent {
     
     this.auth.register(this.email, this.password);
 
-    alert("usuario creado");
+    this.modalMessage = 'usuario creado';
+    this.showModal = true;
     this.goToPage("inicio");
     /* <button (click)="router.navigate(['/master']);">
      <span>Go to master Page</span>
@@ -57,4 +64,3 @@ export class SignupComponent {
      
   }
 }
-
