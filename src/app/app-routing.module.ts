@@ -12,6 +12,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { SignupComponent } from './componentes/signup/signup.component';
 import { LoginPhoneComponent } from './componentes/login-phone/login-phone.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
+import { PreguntasFComponent } from './componentes/preguntas-f/preguntas-f.component';
 //import { ContactformComponent } from './componentes/contactform/contactform.component';
 const routes: Routes = [
  // { path: "contactform", component: ContactformComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: "loginPhone", component: LoginPhoneComponent},
   { path: "signup", component: SignupComponent},
   { path: "search", component: SearchComponent },
+  { path: "preguntas-f", component: PreguntasFComponent },
   { path: "graficas", component: GraficasComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home" }
