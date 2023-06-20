@@ -24,7 +24,9 @@ export class ReservaComponent {
   }
 
 
-
+  getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
 
   registerTour(value: any) {
     const date = (<HTMLInputElement>document.getElementById('date')).value;
@@ -44,7 +46,7 @@ export class ReservaComponent {
       this.alertType = 'danger';
     }  else {
       
-    set(ref(this.database, 'reservas/' + this.getSelectedTour()), {
+    set(ref(this.database, 'reservas/' + this.getSelectedTour() + '_' + this.getRandomInt(1000)), {
       /*username: value.username,
       firstname: value.firstname,
       lastname: value.lastname,
@@ -52,7 +54,6 @@ export class ReservaComponent {
       password: value.password
       */
      tour: this.getSelectedTour(),
-     price: this.getPriceOfTour(this.getSelectedTour()!),
      date: value.date,
      hour: value.time,
      user: username
