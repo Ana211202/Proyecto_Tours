@@ -33,6 +33,9 @@ export class ReservaComponent {
     const currentDate = new Date();
     const reservationDate = new Date(date);
 
+    this.alertMessage = 'Reserva realizada';
+  this.alertType = 'success';
+
     if (!date || !time) {
       this.alertMessage = 'Por favor ingrese una fecha y hora para reservar.';
       this.alertType = 'warning';

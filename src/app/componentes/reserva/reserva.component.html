@@ -18,9 +18,11 @@
     <button mat-raised-button color="accent" type="button"  type="submit" class="reserve-button">Reservar</button>
   </form>
 
-  <div *ngIf="alertMessage" class="alert" [ngClass]="'alert-' + alertType" role="alert">
-    {{ alertMessage }}
-  </div>
+  <!-- Agregar elemento de alerta en el archivo HTML -->
+<div *ngIf="alertMessage" class="alert" [ngClass]="'alert-' + alertType" role="alert">
+  {{ alertMessage }}
+</div>
+
 </div>
 
  
