@@ -18,11 +18,11 @@
             <a class="nav-link" routerLink="/feedback" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Feedback</a>
           </li> -->
          
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/reserva" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Reservar</a>
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'no'">
+            <a class="nav-link" routerLink="/login" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Reservar</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/tablareservas" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Reservaciones</a>
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'true'">
+            <a class="nav-link" routerLink="/reserva" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Reservar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/nosotros" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Acerca de Nosotros</a>
@@ -33,7 +33,7 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/preguntas-f" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Preguntas Frecuentes </a>
           </li>
-          <li class="nav-item" *ngIf="this.isUserLogged() === 'true'">
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'true' && this.getAdmin() === 'yes'">
             <a class="nav-link" routerLink="/graficas" style="color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Grafica</a>
           </li>
           <li class="nav-item" *ngIf="this.isUserLogged() === 'no'">
@@ -42,6 +42,11 @@
           <li class="nav-item" *ngIf="this.isUserLogged() === 'no'">
             <a class="btn btn-primary btn-customized align-items-center" routerLink="/signup" style="background-color: rgb(125, 228, 231);color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif">Registrarse</a>
           </li>
+
+          <li class="nav-item" *ngIf="this.isUserLogged() === 'true'" style="text-align: center;">
+            <a style="text-align: center;color: rgb(255, 255, 255); font-family:'Times New Roman', Times, serif; font-weight: bold;">Bienvenido, {{getUser()}}.</a>
+          </li>
+
           <li class="nav-item" *ngIf="this.isUserLogged() === 'true'" style="text-align: center;">
             <button class="btn btn-primary btn-customized align-items-center" (click)="auth.logout()" style="background-color: rgb(255, 65, 65); color: white">
               Cerrar sesión
