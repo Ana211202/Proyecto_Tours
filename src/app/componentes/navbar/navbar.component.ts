@@ -17,9 +17,23 @@ export class NavbarComponent {
 
   isUserLogged(){
       if(localStorage.getItem("token")){
+        console.log(localStorage.getItem("token")!.valueOf());
         return localStorage.getItem("token")!.valueOf();
       } else {
         return "no";
       }
+  }
+
+  public getUser(){
+    return localStorage.getItem("name").valueOf();
+  }
+  public getAdmin(){
+    if(localStorage.getItem("admin")){
+      console.log(localStorage.getItem("admin").valueOf())
+      return localStorage.getItem("admin").valueOf();
+    } else {
+      return "no";
+    }
+
   }
 }

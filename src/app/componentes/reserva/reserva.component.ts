@@ -29,7 +29,7 @@ export class ReservaComponent {
   registerTour(value: any) {
     const date = (<HTMLInputElement>document.getElementById('date')).value;
     const time = (<HTMLInputElement>document.getElementById('time')).value;
-    
+    var username = localStorage.getItem("username").valueOf();
     const currentDate = new Date();
     const reservationDate = new Date(date);
 
@@ -51,7 +51,8 @@ export class ReservaComponent {
      tour: this.getSelectedTour(),
      price: this.getPriceOfTour(this.getSelectedTour()!),
      date: value.date,
-     hour: value.time
+     hour: value.time,
+     user: username
     });
     
     alert("Reserva realizada");

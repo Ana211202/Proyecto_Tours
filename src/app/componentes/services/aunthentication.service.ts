@@ -27,6 +27,7 @@ export class AunthenticationService {
     this.fireauth.signInWithEmailAndPassword(email,password).then( ()=> {
         localStorage.setItem('token', 'true');
         this.getDatos(email);
+        this.getAdmin(email);
         this.router.navigate(['/reservar']);
     },err =>{
         alert("Something went wrong");
@@ -52,11 +53,19 @@ export class AunthenticationService {
   logout() {
     this.fireauth.signOut().then( () => {
       localStorage.removeItem('token');
-      this.router.navigate(['/login']);
+      localStorage.removeItem('name');
+      localStorage.removeItem('username');
+      localStorage.removeItem('admin');
+      this.redirectTo('/login');
     }, err => {
       alert(err.message);
     })
   }
+
+  redirectTo(uri: string) {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
+    this.router.navigate([uri]));
+ }
 
   public getDatos(correo: string){
     onValue(starCountRef, (snapshot) => {
@@ -95,5 +104,33 @@ export class AunthenticationService {
     });
   }
 
+
+  public getAdmin(correo: string){
+    onValue(starCountRef, (snapshot) => {
+      var data : any[];
+
+      data = Object.values(snapshot.val()); //se tiene el array con objetos 
+      console.log("data onValue: " + Object.values(data)); //se tiene el segundo objeto en forma de array
+      
+      if(!data){
+        alert("No hay usuarios");
+        return;
+      }
+      
+      for(let i=0; i <  data.length;i++){
+          let aux : any;
+          aux = Object.values(data[i])[1];
+          if(aux==correo){
+            let auxDos = Object.values(data[i])[0];
+            if(typeof auxDos === 'string'){
+              localStorage.setItem("admin", auxDos);
+              return;
+            }
+          }
+      }
+    
+      localStorage.setItem("admin", "no");
+    });
+  }
   
 }
